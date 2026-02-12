@@ -24,7 +24,7 @@ AuxDPO/
 ├── evaluation/            # Evaluation scripts and metrics
 ├── prepare_datasets/      # Dataset preprocessing utilities
 └── README.md
-
+```
 
 ---
 
@@ -43,7 +43,7 @@ Example installation:
 ```bash
 pip install torch torchvision torchaudio
 pip install transformers datasets accelerate trl
-
+```
 (Adjust according to your GPU stack.)
 
 Running Training
@@ -58,8 +58,6 @@ This notebook contains:
 Model initialization
 
 DPO + auxiliary objective training
-
-Logging and checkpointing
 
 Validation
 
