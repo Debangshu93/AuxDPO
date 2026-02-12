@@ -46,67 +46,44 @@ pip install transformers datasets accelerate trl
 ```
 (Adjust according to your GPU stack.)
 
-Running Training
+---
 
-The primary implementation is inside:
+## 🚀 Running Training
 
-aux-dpo.ipynb
+The primary implementation is contained within: `aux-dpo.ipynb`
 
+This notebook handles the end-to-end pipeline:
+* **Model Initialization:** Loading base and reference models.
+* **Core Training:** DPO combined with our auxiliary objective.
+* **Logging:** Integrated checkpointing and metric tracking.
+* **Validation:** Real-time performance monitoring.
 
-This notebook contains:
+---
 
-Model initialization
+## 📊 Dataset Preparation
 
-DPO + auxiliary objective training
+Preprocessing scripts are located in `prepare_datasets/`. These utilities:
+* **Clean** raw preference datasets for quality control.
+* **Format** data specifically for DPO-style pair training.
+* **Tokenize** and generate optimized train/validation splits.
 
-Validation
+---
 
-Dataset Preparation
+## 📈 Evaluation
 
-Dataset preprocessing scripts are located in:
+Evaluation scripts are available in the `evaluation/` directory, supporting:
+* **Preference Accuracy:** Measuring model alignment with chosen labels.
+* **Reward Comparison:** Contrastive analysis against standard DPO.
+* **Benchmarks:** Scripts for standard LLM evaluation frameworks.
 
-prepare_datasets/
+---
 
+## ⚙️ Hardware Notes
 
-These scripts:
-
-Clean raw preference datasets
-
-Format them for DPO-style training
-
-Perform tokenization
-
-Generate train/validation splits
-
-Evaluation
-
-Evaluation scripts are available inside:
-
-evaluation/
-
-
-These scripts support:
-
-Preference accuracy
-
-Reward modeling comparison
-
-Benchmark-based evaluation
-
-Hardware Notes
-
-Because experiments were run on AMD MI300X:
-
-Some ROCm-specific configurations may appear
-
-FSDP / distributed training code may assume certain topology
-
-Kernel-level optimizations may differ from CUDA
-
-Users running on NVIDIA GPUs may need to adjust:
-
-torch.cuda vs torch.device
-
-Backend configuration
-
-Flash attention compatibility
+Since experiments were optimized for **AMD MI300X**, please note:
+* **ROCm Configurations:** You may find specific flags for ROCm-based PyTorch.
+* **Distributed Training:** FSDP code assumes the topology of an MI300X cluster.
+* **NVIDIA Compatibility:** If running on CUDA, you may need to adjust:
+    * `torch.cuda` vs `torch.device` calls.
+    * Distributed backend configurations.
+    * Flash Attention versioning.
