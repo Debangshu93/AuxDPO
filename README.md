@@ -27,15 +27,11 @@ Some components are optimized for AMD ROCm environments.
 
 AuxDPO/
 │
-├── aux-dpo.ipynb # Main training & experiment notebook
-│
-├── checkpoints/ # Saved model checkpoints
-│
-├── evaluation/ # Evaluation scripts and metrics
-│
-├── prepare_datasets/ # Dataset preprocessing utilities
-│
+├── aux-dpo.ipynb            # Main training & experiment notebook
+├── evaluation/              # Evaluation scripts and metrics
+├── prepare_datasets/        # Dataset preprocessing utilities
 └── README.md
+
 
 
 ---
