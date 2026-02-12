@@ -2,8 +2,7 @@
 
 Official implementation of **Auxiliary-Enhanced Direct Preference Optimization (AuxDPO)**.
 
-> 🎤 Accepted as **ICLR 2026 Oral**  
-> 📄 Paper: https://arxiv.org/abs/2510.20413  
+> 🎤 **Accepted as ICLR 2026 Oral** > 📄 **Paper:** [https://arxiv.org/abs/2510.20413](https://arxiv.org/abs/2510.20413)
 
 ---
 
@@ -13,25 +12,18 @@ AuxDPO extends Direct Preference Optimization (DPO) by incorporating auxiliary o
 
 This repository contains:
 
-- 📓 Training notebook  
-- 💾 Model checkpoints  
-- 📊 Evaluation scripts  
-- 🗂 Dataset preprocessing utilities  
-
-> ⚠️ **Note:** All experiments were run on **AMD MI300X clusters**.  
-Some components are optimized for AMD ROCm environments.
+- 📓 **Training notebook** - 📊 **Evaluation scripts** - 🗂 **Dataset preprocessing utilities** > ⚠️ **Note:** All experiments were run on **AMD MI300X clusters**. Some components are optimized for AMD ROCm environments.
 
 ---
 
 ## Repository Structure
 
+```text
 AuxDPO/
-│
-├── aux-dpo.ipynb            # Main training & experiment notebook
-├── evaluation/              # Evaluation scripts and metrics
-├── prepare_datasets/        # Dataset preprocessing utilities
+├── aux-dpo.ipynb          # Main training & experiment notebook
+├── evaluation/            # Evaluation scripts and metrics
+├── prepare_datasets/      # Dataset preprocessing utilities
 └── README.md
-
 
 
 ---
